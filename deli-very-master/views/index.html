@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>BurgerOnline</title>
-        <meta charset="utf-8"/>
-    </head>
-    <body>
+<head>
+	<title>BurgerOnline</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
 	<main>
-	<h1>Welcome to BurgerOnline</h1>
-	<h2>Select burger</h2>
-	<div>This is where you execute burger selection</div><br />
-        <table>
-            <thead>
-                <tr>
-                    <th>The Fire Burger</th>
-                    <th>Fried Turkey Burger</th>
-                    <th>A Double w/Cheese</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="https://commentform.marketforce.com/images/BK-WebComment/BB_WHOPPER-v1.png" width="300"</td>
-                    <td><img src="https://commentform.marketforce.com/images/BK-WebComment/BB_WHOPPER-v1.png" width="300"</td>
-                    <td><img src="https://commentform.marketforce.com/images/BK-WebComment/BB_WHOPPER-v1.png" width="300" </td>
-                </tr>
-                <tr>
-                    <td>
-                        <ul>
-                            <li>Carrot</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Bacon</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li> Vegan</li>
-                        </ul>
-                    </td>
-                </tr>
-        </table>
-        <h2>Customer information</h2>
-        <div>This is where you provide necessary information</div>
-        <section id="contact">
-            <form>
-                <p>
-                    <label for="fullname">Full name</label><br>
-                    <input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
-                </p>
-                <p>
-                    <label for="email">E-mail</label><br>
-                    <input type="email" id="email" name="em" placeholder="E-mail address">
-                </p>
-                <p>
-                    <label for="street">Street</label><br>
-                    <input type="text" id="street" name="s" required="required" placeholder="Street name">
-                </p>
-                <p>
-                    <label for="House">House</label><br>
-                    <input type="number" id="number" name="n" required="required" placeholder="House number">
-                </p>
-            </form>
-        </section>
-        <p>
-            <label for="recipient">Payment</label><br>
-            <select id="recipient" name="rcp">
-                <option>Visa</option>
-                <option>PayPal</option>
-                <option>MasterCard</option>
-                <option>Other</option>
-            </select>
-        </p>
+		<h1>Welcome to BurgerOnline</h1>
+		<h2>Select burger</h2>
+		<div>This is where you execute burger selection</div><br />
+		<table>
+			<thead>
+				<tr>
+					<th>The Fire Burger</th>
+					<th>Fried Turkey Burger</th>
+					<th>A Double w/Cheese</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src="https://www.bk.com/sites/default/files/VeggieBurger_thumb.png" width="300"</td>
+					<td><img src="http://bk-emea-prd.s3.amazonaws.com/sites/burgerking.co.uk/files/BK_Angus_Burger_300x270px.png" width="300"</td>
+					<td><img src="http://bk-apac-prd.s3.amazonaws.com/sites/burgerking.co.nz/files/BUR2423D_Kings-Collection_PRODUCT_300x270_02%5B1%5D.png" width="300" </td>
+				</tr>
+				<section class="bold">
+				<tr>
+					<td>
+						<ul>
+							<li >Carrot</li>
+							<li class="bold">Lactose</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li >Bacon</li>
+							<li class="bold">Gluten</li>
+						</ul>
+					</td>
+					<td>
+						<ul>
+							<li >Vegan</li>
+							<li class="bold">Gluten</li>
+						</ul>
+					</td>
+				</tr>	
+				</section>
+		</table>
+			<h2>Customer information</h2>
+			<div>This is where you provide necessary information</div>
+			<section id="contact">
+				<form>
+					<p>
+						<label for="fullname">Full name</label><br>
+						<input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+					</p>
+					<p>
+						<label for="email">E-mail</label><br>
+						<input type="email" id="email" name="em" placeholder="E-mail address">
+					</p>
+					<p>
+						<label for="street">Street</label><br>
+						<input type="text" id="street" name="s" required="required" placeholder="Street name">
+					</p>
+					<p>
+						<label for="House">House</label><br>
+						<input type="number" id="number" name="n" required="required" placeholder="House number">
+					</p>
+					<form>
+						<label>Gender</label><br>
+						<input type="radio" name="gender" value="male" checked> Male<br>
+						<input type="radio" name="gender" value="female"> Female<br>
+						<input type="radio" name="gender" value="other"> Other<br>
+					</form><br>
+					<label for="recipient">Payment</label><br>
+					<select id="recipient" name="rcp">
+						<option>Visa</option>
+						<option>PayPal</option>
+						<option>MasterCard</option>
+						<option>Other</option>
+					</select>
+				</p>
+				<button type="submit"><img src="http://www.filledwithchi.com/images/sp/place-order.png" width="300"></button>
 	</main>
-	<footer>
-	<hr>
-	&copy;
-	2018 Hypothetical Burgers Inc.
-	</footer>
-    </body>
+			<footer>
+				<hr>
+				&copy;
+				2018 Hypothetical Burgers Inc.
+			</footer>
+</body>
 </html>
