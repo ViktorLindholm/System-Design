@@ -10,3 +10,31 @@ body {
 #bold{
 	font-weight: bold;
 }
+
+#blackbackground{
+	background-color: black;
+	border: 2px;
+	border-spacing: 3000000px;
+	border-style: dotted;
+	color: white;
+}
+
+#whitebackground{
+	background-color: white;
+	border: 2px;
+	border-style: dotted;
+}
+
+button:hover{
+	opacity: 50;
+	background-color: green;
+	cursor: cell;
+}
+
+table, th, td{
+	width: 5%;
+}
+
+.headermargin{
+	margin-top: 10px;
+}
