@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="js/js_script.js"></script>
+	<script src="https://vuejs.org/js/vue.js"></script>
+	<script src="js/vue_script.js"></script>
 	<div class="container">
 		<title>BurgerOnline</title>	
 		<h1 class="centered">Welcome to BurgerOnline</h1>
@@ -11,27 +14,30 @@
 </head>
 <body>
 	<main>
-		<h2>Select burger</h2> 
-		<div>This is where you execute burger selection</div><br /> 
+		<div class="centeredblack" >
+		<h2>Select burger</h2><br>
+		<div >This is where you execute burger selection</div>
+		</div>
 		<div class="grid-container">
-			<div class="grid-item">The Fire Burger<br><img src="http://bk-apac-prd.s3.amazonaws.com/sites/burgerkingindia.in/files/VegWhopper-Thumb_0_0.png" width="300">
+			<div class="grid-item">The Fire Burger<br><img src="http://bk-apac-prd.s3.amazonaws.com/sites/burgerkingindia.in/files/VegWhopper-Thumb_0_0.png" width="em">
 				<ul>
 					<li >Carrot</li>
 					<li class="bold">Lactose</li>
 				</ul>
 			</div>
-			<div class="grid-item">Fried Turkey Burger<br><img src="http://bk-emea-prd.s3.amazonaws.com/sites/burgerking.co.uk/files/BK_Angus_Burger_300x270px.png" width="300">
+			<div class="grid-item">Fried Turkey Burger<br><img src="http://bk-emea-prd.s3.amazonaws.com/sites/burgerking.co.uk/files/BK_Angus_Burger_300x270px.png" width="em">
 				<ul>
 					<li >Bacon</li>
 					<li class="bold">Gluten</li>
 				</ul>
 			</div>
-			<div class="grid-item">A Double w/cheese<br><img src="http://bk-apac-prd.s3.amazonaws.com/sites/burgerking.co.nz/files/BUR2423D_Kings-Collection_PRODUCT_300x270_02%5B1%5D.png" width="300">
+			<div class="grid-item">A Double w/cheese<br><img src="http://bk-apac-prd.s3.amazonaws.com/sites/burgerking.co.nz/files/BUR2423D_Kings-Collection_PRODUCT_300x270_02%5B1%5D.png" width="em">
 				<ul>
 					<li >Vegan</li>
 					<li class="bold">Gluten</li>
 				</ul>
 			</div>
+		</div>
 		</div>
 		<div id="whitebackground">
 			<h2>Customer information</h2>

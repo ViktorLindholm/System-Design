@@ -1,4 +1,10 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
 body {
 	font-family: arial;
 	font-size: 1.3em;'
@@ -10,6 +16,11 @@ body {
 
 #bold{
 	font-weight: bold;
+}
+
+.centeredblack{
+	background-color: black;
+	color: white;
 }
 
 #blackbackground{
