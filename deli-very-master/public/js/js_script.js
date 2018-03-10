@@ -76,13 +76,14 @@ function getBurgerName(){
 
 function getPersonalInformation(){
 	var information = readvalues();
-	var gender = document.getElementById('')
+	var gender = document.getElementById('');
+	return information;
 }
 
 function displayvalues()
 {
 	var displayvalues = new readvalues();
-	var box = document.getElementById('whitebackground');
+	var box = document.getElementById('myorder');
 	for(var value of displayvalues)
 	{
 		var name = document.createTextNode(value);

@@ -32,6 +32,14 @@ body {
 	margin:10px 10px;
 }
 
+#myorder{
+	background-color: black;
+	border: 2px;
+	border-style: dotted;
+	margin:10px 10px;
+	color: white;
+}
+
 button:hover{
 	opacity: 50;
 	background-color: green;

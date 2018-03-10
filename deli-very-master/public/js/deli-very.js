@@ -8,8 +8,14 @@ var vm = new Vue({
   el: '#orderContainer',
   data: {
     orders: {},
+    orderId: 0,
   },
   methods: {
+    getId: function (){
+      this.orderId = this.orderId + 1;
+      return this.orderId;
+    },
+
     getNext: function () {
       var lastOrder = Object.keys(this.orders).reduce(function (last, next) {
         return Math.max(last, next);
@@ -26,15 +32,13 @@ var vm = new Vue({
       };
       this.orders = { 
         'T' : {
-          orderId: 'T',
+          orderId: this.getId(),
           details: { 
             x: event.clientX - 10 - offset.x,
             y: event.clientY - 10 - offset.y 
           },
-          orderItems: getBurgerName()
-          personalInformation:{
-            
-          }
+          orderItems: getBurgerName(),
+          personalInformation: getPersonalInformation()  
         }
       };
     }
