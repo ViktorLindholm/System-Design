@@ -26,14 +26,14 @@ for (var burger of burgers)
 	var li0 = document.createElement('li');
 	var li1 = document.createElement('li');
 	var li2 = document.createElement('li');
-    var button = document.createElement('input');
+	var button = document.createElement('input');
 
 	box.setAttribute('class','grid-item');
-    button.setAttribute('type', 'checkbox');
-    button.setAttribute('name', burger.name);
-    button.setAttribute('class', 'checkbox');
+	button.setAttribute('type', 'checkbox');
+	button.setAttribute('name', burger.name);
+	button.setAttribute('class', 'checkbox');
 	menu.appendChild(box);
-    
+
 	box.appendChild(title);
 	img.setAttribute('src', burger.img);
 	img.setAttribute('class', 'bold');
@@ -45,47 +45,62 @@ for (var burger of burgers)
 	li0.appendChild(kCal);
 	li1.appendChild(gluten);
 	li2.appendChild(lactose);
-    box.appendChild(button);
+	box.appendChild(button);
 }
 
 
 function readvalues(){
-var name = document.getElementById('fullname').value;
-var email = document.getElementById('email').value;
+	var order = [];
+	var name = document.getElementById('fullname').value;
+	var email = document.getElementById('email').value;
 //var street = document.getElementById('street').value;
 //var house = document.getElementById('number').value;
 var payment = document.getElementById('recipient').value;
 //return [name,email,street,house,payment];
-return [name,email,payment];
+order.push(name);
+order.push(email);
+order.push(payment);
+return order;
 }
 
+function getBurgerName(){
+	var order = [];
+	var burgernames = document.getElementsByClassName('checkbox');
+	for(var title of burgernames){
+		if(title.checked){
+			order.push(title.name);
+		}
+	}
+	return order;
+}
+
+function getPersonalInformation(){
+	var information = readvalues();
+	var gender = document.getElementById('')
+}
 
 function displayvalues()
 {
-var displayvalues = new readvalues();
-var box = document.getElementById('whitebackground');
-for(var value of displayvalues)
-{
-var name = document.createTextNode(value);
-var br = document.createElement('br');
-box.appendChild(name);
-box.appendChild(br);
-}      
-    var burgernames = document.getElementsByClassName('checkbox');
-for(var title of burgernames)
-{
-    if(title.checked)
-{
-    var name = document.createTextNode(title.name);
-    var br = document.createElement('br');
-    box.appendChild(name);
-    box.appendChild(br);
-}
-}
+	var displayvalues = new readvalues();
+	var box = document.getElementById('whitebackground');
+	for(var value of displayvalues)
+	{
+		var name = document.createTextNode(value);
+		var br = document.createElement('br');
+		box.appendChild(name);
+		box.appendChild(br);
+	}      
+	var burgernames = document.getElementsByClassName('checkbox');
+	for(var title of burgernames)
+	{
+		if(title.checked)
+		{
+			var name = document.createTextNode(title.name);
+			var br = document.createElement('br');
+			box.appendChild(name);
+			box.appendChild(br);
+		}
+	}
 }
 
 document.getElementById("orderButton").addEventListener("click", displayvalues);
-
-function displayOrder(){
-
-}

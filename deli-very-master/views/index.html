@@ -1,17 +1,16 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/deli-very.css">
-    <script src="/vue/vue.js" defer></script>
-    <script src="/socket.io/socket.io.js" defer></script>
-    <script src="js/deli-very.js" defer></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/deli-very.css">
+	<script src="/vue/vue.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+	<script src="js/deli-very.js" defer></script>
 	<meta charset="utf-8">
 	<script src="https://vuejs.org/js/vue.js"></script>	
-	<script type="text/javascript" src="js/menu.js"></script>
 	<script src="js/js_script.js" defer></script>
 	<script src="js/vue_script.js"></script>
-    <script src="/socket.io/socket.io.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<title>BurgerOnline</title>	
 	<div class="container">
@@ -29,48 +28,51 @@
 	<div id="whitebackground">
 		<h2>Customer information</h2>
 		<div>This is where you provide necessary information</div>
-			<form>
-				<p>
-					<label for="fullname">Full name</label><br>
-					<input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
-				</p>
-				<p>
-					<label for="email">E-mail</label><br>
-					<input type="email" id="email" name="em" placeholder="E-mail address">
-				</p>
-             </form>
-			    <form>
-					<label>Gender</label><br>
-					<input type="radio" name="gender" value="male" checked> Male<br>
-					<input type="radio" name="gender" value="female"> Female<br>
-					<input type="radio" name="gender" value="other"> Other<br>
-				</form><br>
-				<label for="recipient">Payment</label><br>
-				<select id="recipient" name="rcp">
-					<option>Visa</option>
-					<option>PayPal</option>
-					<option>MasterCard</option>
-					<option>Other</option>
-				</select>
-			</p> 
-		</div>
-    <h1> Click in the map! </h1>
-    <div class="view-box">
-        <div id="dots" v-on:click="addOrder">
-            <div v-for="(order, key) in orders"
-                 v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
-                {{key}}
-            </div>
-        </div>
-    </div>
-    <div class="grid-container" id="whitebackground"></div>
-		<button id="orderButton" class="margin" type="submit"><img src="http://www.filledwithchi.com/images/sp/place-order.png" width="300"></button> 
-    <p id="clicked"></p>
-	<footer>
-		<hr>
-		&copy;
-		2018 Hypothetical Burgers Inc.
-	</footer>
+		<form>
+			<p>
+				<label for="fullname">Full name</label><br>
+				<input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+			</p>
+			<p>
+				<label for="email">E-mail</label><br>
+				<input type="email" id="email" name="em" placeholder="E-mail address">
+			</p>
+		</form>
+		<form>
+			<label>Gender</label><br>
+			<input type="radio" name="gender" value="male" checked> Male<br>
+			<input type="radio" name="gender" value="female"> Female<br>
+			<input type="radio" name="gender" value="other"> Other<br>
+		</form><br>
+		<label for="recipient">Payment</label><br>
+		<select id="recipient" name="rcp">
+			<option>Visa</option>
+			<option>PayPal</option>
+			<option>MasterCard</option>
+			<option>Other</option>
+		</select>
+	</p> 
+</div>
+
+<h1> Click in the map! </h1>
+<div id="orderContainer">
+<div class="view-box">
+	<div id="dots" v-on:click="displayOrder">
+		<div v-for="(order, key) in orders"
+		v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">
+		{{key}}
+	</div>
+</div>
+</div>
+<div class="grid-container" id="whitebackground"></div>
+<button id="orderButton" v-on:click="addOrder" class="margin" type="submit"><img src="http://www.filledwithchi.com/images/sp/place-order.png" width="300"></button> 
+<p id="clicked"></p>
+</div>
+<footer>
+	<hr>
+	&copy;
+	2018 Hypothetical Burgers Inc.
+</footer>
 </body>
 
 
